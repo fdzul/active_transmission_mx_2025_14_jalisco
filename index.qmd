@@ -21,7 +21,7 @@ library(magrittr)
 
 ### [**Guadalajara**]{style="color:#990000"}
 
-```{r}
+```{r chains_guadalajara}
 denhotspots::transmission_chains_map(geocoded_dataset = z,
                                      cve_edo = "14",
                                      locality = c("Guadalajara", 
@@ -33,7 +33,7 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 
 
 ### [**Puerto Vallarta**]{style="color:#990000"}
-```{r}
+```{r cadenas_puerto_vallarta}
 denhotspots::transmission_chains_map(geocoded_dataset = z,
                                      cve_edo = "14",
                                      locality = "Puerto Vallarta",
@@ -49,7 +49,7 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 
 ### [**Guadalajara**]{style="color:#990000"}
 
-```{r}
+```{r heatmap_guadalajara}
 densnv::mp_heatmap(geocoded_datasets = z,
                    cve_edo = "14",
                    locality = c("Guadalajara", 
@@ -68,7 +68,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 
 ### [**Puerto Vallarta**]{style="color:#990000"}
 
-```{r}
+```{r heatmap_puerto_vallarta}
 densnv::mp_heatmap(geocoded_datasets = z,
                    cve_edo = "14",
                    locality = "Puerto Vallarta",
