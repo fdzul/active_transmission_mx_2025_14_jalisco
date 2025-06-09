@@ -10,7 +10,7 @@ theme: custom.scss
 library(sf)
 mapview::mapviewOptions(default = TRUE,
                         basemaps.color.shuffle = FALSE)
-load("/Users/felipedzul/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+load("~/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
 library(magrittr)
 ```
 
@@ -57,6 +57,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
                                 "Zapopan", 
                                 "Tonalá"),
                    status_caso = c(1, 2),
+                   kernel = 80,
                    week = c(1:53),
                    zoom = NULL,
                    map_type = NULL,
@@ -73,6 +74,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
                    cve_edo = "14",
                    locality = "Puerto Vallarta",
                    status_caso = c(1, 2),
+                   kernel = 500,
                    week = c(1:53),
                    zoom = NULL,
                    map_type = NULL,
