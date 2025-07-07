@@ -10,7 +10,8 @@ theme: custom.scss
 library(sf)
 mapview::mapviewOptions(default = TRUE,
                         basemaps.color.shuffle = FALSE)
-load("~/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+#load("~/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+load("~/Documents/geocoding_mx/2025/8.RData/denmex_2025.RData")
 library(magrittr)
 ```
 
@@ -50,7 +51,7 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 ### [**Guadalajara**]{style="color:#990000"}
 
 ```{r heatmap_guadalajara}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "14",
                    locality = c("Guadalajara", 
                                 "Tlaquepaque",
@@ -70,7 +71,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 ### [**Puerto Vallarta**]{style="color:#990000"}
 
 ```{r heatmap_puerto_vallarta}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "14",
                    locality = "Puerto Vallarta",
                    status_caso = c(1, 2),
@@ -86,16 +87,3 @@ densnv::mp_heatmap(geocoded_datasets = z,
 :::
 
 
-# [**Log Gaussian Cox Processes**]{style="font-size:8pt"}
-
-::: panel-tabset
-
-### [**Guadalajara**]{style="color:#990000"}
-
-Los casos de dengue hasta la presente fecha son insuficientes para correr el modelo espacial Log Gaussian Cox Processes, hay que esperar hasta que el tamaño de muestra sea adecuado para la implementación de este modelo.
-
-### [**Puerto Vallarta**]{style="color:#990000"}
-
-Los casos de dengue hasta la presente fecha son insuficientes para correr el modelo espacial Log Gaussian Cox Processes, hay que esperar hasta que el tamaño de muestra sea adecuado para la implementación de este modelo.
-
-:::
